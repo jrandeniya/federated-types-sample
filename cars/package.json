@@ -1,0 +1,53 @@
+{
+  "name": "cars",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@touk/federated-types": "^1.1.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "tailwindcss": "^2.2.16",
+    "typescript": "^4.4.3",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "serve": "npm run build && serve -s build -p 3002",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "gen-types": "npm run federate-types && npm run pack-types",
+    "federate-types": "make-federated-types --outputDir ./cars-dts",
+    "pack-types": "rm -rf ./public/cars-dts.tgz && tar -czvf ./public/cars-dts.tgz ./cars-dts/ && rm -rf ./cars-dts"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "stylelint": "^12.0.0",
+    "stylelint-formatter-pretty": "^1.1.3",
+    "stylelint-webpack-plugin": "^1.1.2"
+  }
+}

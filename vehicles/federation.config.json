@@ -1,0 +1,7 @@
+{
+  "name": "vehicles",
+  "exposes": {},
+  "remotes": {
+    "cars": "cars@http://localhost:3002/remoteEntry.js"
+  }
+}

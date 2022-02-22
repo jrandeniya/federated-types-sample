@@ -1,0 +1,6 @@
+{
+  "name": "cars",
+  "exposes": {
+    "./Button": "./src/components/Button/index"
+  }
+}
