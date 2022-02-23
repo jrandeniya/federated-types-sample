@@ -6,9 +6,11 @@ This sample application shows how you can share Typescript definitions between m
 
 Webpack Federation is great for run-time compliation of microfrontends but you lose the benefits of Typescript since only the compiled Javascript code makes it to the remote's `remoteEntry` file.
 
+This is documented here: https://github.com/module-federation/module-federation-examples/issues/20
+
 ## Solution
 
-In this example, we are sharing React component prop interfaces of a remote application (`cars`) with the shell application (`vehicles`). Whenever the shell application is compiled, it will check against the currently deployed prop interfaces from `cars`. If there is a breaking change that the shell application hasn't conformed to - it will throw a compiele error.
+In this example, we are sharing React component prop interfaces of a remote application (`cars`) with the shell application (`vehicles`). Whenever the shell application is compiled, it will check against the currently deployed prop interfaces from `cars`. If there is a breaking change that the shell application hasn't conformed to - it will throw a compile error.
 
 ### Local Setup
 
